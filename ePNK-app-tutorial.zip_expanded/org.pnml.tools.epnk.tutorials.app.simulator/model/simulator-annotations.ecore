@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="techsimannotations" nsURI="http://epnk.tools.pnml.org/tutorials/app/technialc/simanno"
+    nsPrefix="tsanno">
+  <eClassifiers xsi:type="ecore:EClass" name="Marking" eSuperTypes="../../org.pnml.tools.epnk.annotations/model/NetAnnotations.ecore#//ObjectAnnotation ../../org.pnml.tools.epnk.annotations/model/NetAnnotations.ecore#//TextualAnnotation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EnabledTransition" eSuperTypes="../../org.pnml.tools.epnk.annotations/model/NetAnnotations.ecore#//ObjectAnnotation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="in" upperBound="-1" eType="#//InvolvedArc"
+        containment="true" eOpposite="#//InvolvedArc/target"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="out" upperBound="-1" eType="#//InvolvedArc"
+        containment="true" eOpposite="#//InvolvedArc/source"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resolve" eType="#//EnabledTransition"
+        eOpposite="#//EnabledTransition/refs"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="enabled" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refs" upperBound="-1" eType="#//EnabledTransition"
+        eOpposite="#//EnabledTransition/resolve"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InvolvedArc" eSuperTypes="../../org.pnml.tools.epnk.annotations/model/NetAnnotations.ecore#//ObjectAnnotation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//EnabledTransition"
+        eOpposite="#//EnabledTransition/in"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//EnabledTransition"
+        eOpposite="#//EnabledTransition/out"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="active" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+</ecore:EPackage>

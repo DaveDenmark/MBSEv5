@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+  <!-- definition of a sub menu for popup menus for all MDSU tutorials -->
+  <extension point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <menu
+               id="dk.dtu.compute.mbse.tutorials.menu"
+               label="MBSE Tutorials">
+         </menu>
+      </menuContribution>
+   </extension>
+
+   <!-- definition of the actual command for firing a transition -->
+   <extension point="org.eclipse.ui.commands">
+      <command
+            description="Fires the selected transition"
+            id="dk.dtu.compute.mbse.petrinet.simulator.command"
+            name="Fire Transition">
+      </command>
+   </extension>
+
+   <!-- definition of a menu entry in the MDSU popup sub menu for the above
+        firing transiton command -->
+   <extension  point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:dk.dtu.compute.mbse.tutorials.menu?after=additions">
+         <command
+               commandId="dk.dtu.compute.mbse.petrinet.simulator.command">
+            <visibleWhen>
+               <with variable="selection">
+                  <count value="1"/>
+                  <iterate>
+                     <!-- TODO: the type attribute needs to be the qualified name of
+                          your Transition class (generated from the Petri net model) -->
+                     <adapt type="dk.dtu.compute.mbse.petrinet.Transition"/>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+   <!-- the handler for the fire transition command -->
+   <extension point="org.eclipse.ui.handlers">
+      <handler
+            class="dk.dtu.compute.mbse.petrinet.simulator.SimulatorCommandHandler"
+            commandId="dk.dtu.compute.mbse.petrinet.simulator.command">
+      </handler>
+   </extension>
+
+</plugin>

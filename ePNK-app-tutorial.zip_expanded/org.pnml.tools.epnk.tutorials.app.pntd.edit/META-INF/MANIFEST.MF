@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.pnml.tools.epnk.tutorials.app.pntd.edit;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Activator: org.pnml.tools.epnk.tutorials.app.technical.provider.TechnicalEditPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: org.pnml.tools.epnk.tutorials.app.technical.provider
+Require-Bundle: org.eclipse.core.runtime,
+ org.pnml.tools.epnk.tutorials.app.pntd;visibility:=reexport,
+ org.eclipse.emf.edit;visibility:=reexport,
+ org.pnml.tools.epnk;visibility:=reexport,
+ org.pnml.tools.epnk.edit;visibility:=reexport
+Bundle-ActivationPolicy: lazy

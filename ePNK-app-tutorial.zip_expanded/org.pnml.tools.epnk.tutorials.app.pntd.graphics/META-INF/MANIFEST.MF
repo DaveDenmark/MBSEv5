@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Technical PNTD Graphical Extension
+Bundle-SymbolicName: org.pnml.tools.epnk.tutorials.app.pntd.graphics;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Require-Bundle: org.pnml.tools.epnk.diagram;bundle-version="1.1.1",
+ org.pnml.tools.epnk.tutorials.app.pntd;bundle-version="1.0.0"
+Bundle-Vendor: Ekkart Kindler, Technical University of Denmark, DTU Compute, Denmark

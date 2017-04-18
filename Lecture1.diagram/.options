@@ -1,0 +1,7 @@
+# Tracing options for the Lecture1.diagram plug-in
+
+# Common issues
+Lecture1.diagram/debug=false
+
+# Visual IDs
+Lecture1.diagram/debug/visualID=false

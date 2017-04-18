@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Graphics
+Bundle-SymbolicName: dk.dtu.compute.mbse.yawl.graphics;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.pnml.tools.epnk.diagram;bundle-version="1.1.2"
+Import-Package: dk.dtu.compute.mbse.yawl,
+ dk.dtu.compute.mbse.yawl.helpfunctions

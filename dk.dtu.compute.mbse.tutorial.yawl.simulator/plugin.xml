@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated yawlannotations -->
+      <package
+            uri="http://www2.compute.dtu.dk/courses/02341/f17/simulator/index.shtml"
+            class="dk.dtu.compute.mbse.tutorial.yawl.simulator.yawlannotations.YawlannotationsPackage"
+            genModel="model/yawlannotations.genmodel"/>
+   </extension>
+   
+   <extension
+     id="dk.dtu.compute.mbse.tutorial.yawl.simulator"
+     name="YAWL Simulator"
+     point="org.pnml.tools.epnk.applications.applicationfactory">
+   <applicationfactory
+   		class="dk.dtu.compute.mbse.tutorial.yawl.simulator.application.YAWLSimulatorFactory"
+   		description="A simple YAWL simulator by group 6">
+   	</applicationfactory>
+   </extension>
+ 
+</plugin>

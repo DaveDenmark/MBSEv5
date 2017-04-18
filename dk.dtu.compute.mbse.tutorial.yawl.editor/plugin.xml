@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated yawl -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="dk.dtu.compute.mbse.yawl.presentation.YawlModelWizardID"
+            name="%_UI_YawlModelWizard_label"
+            class="dk.dtu.compute.mbse.yawl.presentation.YawlModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/YawlModelFile.gif">
+         <description>%_UI_YawlModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated yawl -->
+      <editor
+            id="dk.dtu.compute.mbse.yawl.presentation.YawlEditorID"
+            name="%_UI_YawlEditor_label"
+            icon="icons/full/obj16/YawlModelFile.gif"
+            extensions="yawl"
+            class="dk.dtu.compute.mbse.yawl.presentation.YawlEditor"
+            contributorClass="dk.dtu.compute.mbse.yawl.presentation.YawlActionBarContributor">
+      </editor>
+   </extension>
+</plugin>

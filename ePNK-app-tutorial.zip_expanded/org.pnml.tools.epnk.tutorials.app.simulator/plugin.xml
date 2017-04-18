@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated simulator-annotations -->
+      <package
+            uri="http://epnk.tools.pnml.org/tutorials/app/technialc/simanno"
+            class="org.pnml.tools.epnk.tutorials.app.simulator.techsimannotations.TechsimannotationsPackage"
+            genModel="model/simulator-annotations.genmodel"/>
+   </extension>
+   
+   <extension
+         id="org.pnml.tools.epnk.tutorials.app.simulator.application"
+         name="Technical Simulator (Tutorial)"
+         point="org.pnml.tools.epnk.applications.applicationfactory">
+      <applicationfactory
+            class="org.pnml.tools.epnk.tutorials.app.simulator.application.TechnicalSimulatorFactory"
+            description="A simple simulator used as technical example in the ePNK tutorial">
+      </applicationfactory>
+   </extension>   
+
+</plugin>

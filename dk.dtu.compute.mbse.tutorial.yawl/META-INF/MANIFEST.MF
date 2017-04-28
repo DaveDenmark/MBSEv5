@@ -13,6 +13,6 @@ Export-Package: dk.dtu.compute.mbse.yawl,
  dk.dtu.compute.mbse.yawl.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.pnml.tools.epnk;visibility:=reexport,
- org.eclipse.emf.validation;bundle-version="1.8.0"
+ org.pnml.tools.epnk;visibility:=reexport
 Bundle-ActivationPolicy: lazy
+Import-Package: org.eclipse.emf.validation

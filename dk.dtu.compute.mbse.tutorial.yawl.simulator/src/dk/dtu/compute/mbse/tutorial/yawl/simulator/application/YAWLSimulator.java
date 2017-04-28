@@ -54,7 +54,7 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 		ApplicationUIManager manager = this.getPresentationManager();
 		manager.addActionHandler(new EnabledTransitionHandler(this));
 		manager.addPresentationHandler(new YAWLAnnotationsPresentationHandler());
-		// manager.addTransitionHandler(new InvolvedArcHandler(this));
+		manager.addActionHandler(new SelectArcHandler(this));
 		// TODO: Action handler for Arcs
 		
 		adapter = new NetChangeListener(this);

@@ -93,7 +93,7 @@ public interface EnabledTransition extends ObjectAnnotation {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" required="true"
-	 * @generated
+	 * @generated NOT
 	 */
 	Transition getTransition();
 

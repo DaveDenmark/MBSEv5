@@ -155,12 +155,14 @@ public class EnabledTransitionImpl extends ObjectAnnotationImpl implements Enabl
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
+	 * @Author David s143312, Rasmus s144219, Henrik s154280
 	 */
 	public Transition getTransition() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+			if (getObject() instanceof Transition) {
+				return (Transition) getObject();
+			}
+			return null;
 	}
 
 	/**

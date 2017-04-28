@@ -7,7 +7,8 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Export-Package: org.pnml.tools.epnk.tutorials.app.simulator.techsimannotations,
+Export-Package: org.pnml.tools.epnk.tutorials.app.simulator.application,
+ org.pnml.tools.epnk.tutorials.app.simulator.techsimannotations,
  org.pnml.tools.epnk.tutorials.app.simulator.techsimannotations.impl,
  org.pnml.tools.epnk.tutorials.app.simulator.techsimannotations.util
 Require-Bundle: org.eclipse.core.runtime,

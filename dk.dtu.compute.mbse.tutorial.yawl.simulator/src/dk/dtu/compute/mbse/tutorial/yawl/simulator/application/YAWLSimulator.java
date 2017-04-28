@@ -36,7 +36,7 @@ import dk.dtu.compute.mbse.yawl.helpfunctions.YAWLFunctions;
  * Group 6 simulator application for YAWL nets. 
  * 
  * @author David Josef Kristensen - s143312 
- * @author Henrik Iller Wærsted - s154280
+ * @author Henrik Iller Wï¿½rsted - s154280
  * @author Lars Vandsted Myrup Jensen - s153201 
  * @author Rasmus Hannibal Barlach Moulvad - s153256
  * @author Rasmus Vulpius Gregersen - S144219
@@ -53,7 +53,7 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 		getNetAnnotations().setName("A simple YAWL simulator by group 6");
 		ApplicationUIManager manager = this.getPresentationManager();
 		manager.addActionHandler(new EnabledTransitionHandler(this));
-		// manager.addPresentationHandler(new YAWLAnnotationsPresentationHandler());
+		manager.addPresentationHandler(new YAWLAnnotationsPresentationHandler());
 		// manager.addTransitionHandler(new InvolvedArcHandler(this));
 		// TODO: Action handler for Arcs
 		

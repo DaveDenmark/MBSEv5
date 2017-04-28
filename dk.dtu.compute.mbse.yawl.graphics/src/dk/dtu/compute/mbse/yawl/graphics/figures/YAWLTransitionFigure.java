@@ -32,7 +32,6 @@ public class YAWLTransitionFigure extends TransitionFigure {
 	@Override
 	protected void fillShape(Graphics graphics) {
 		super.fillShape(graphics);
-		
 
 		graphics.pushState();
 
